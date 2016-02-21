@@ -1,8 +1,8 @@
 var express  = require('express');
     router   = express.Router();
- 		User     = require('../models/usersModel.js'),
-		Vil 	 = require('../models/vilModel'),
- 		passport = require('passport');    
+ 			User     = require('../models/usersModel.js'),
+				Vil 	 = require('../models/vilModel'),
+ 			passport = require('passport');    
 
 // user index
 // router.get('/', function(req, res) {
@@ -62,6 +62,17 @@ router.post('/login', passport.authenticate('local-login', {
     res.redirect('/users/' + req.user.id);
 });
 
+router.post('/:id/newVil', function(req, res) {
+	User.findById(req.params.id, function(err, user) {
+		var vils = new Vil(req.body);
+		vils.save(function(err, vils) {
+			user.vilss.push(vils);
+			user.save(function(err, user) {
+				res.redirect('/users/' + req.params.id);
+					});			
+			});
+		});
+});
 
 
 

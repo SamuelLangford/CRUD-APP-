@@ -34,7 +34,8 @@ app.use(function(req, res, next) {
 var usersController = require('./controllers/usersController');
 app.use('/users', usersController);
 
-
+var vilController = require('./controllers/vilController');
+app.use('/villains', vilController)
 //this is the rout to the home page 
 app.get('/', function(req, res){
   res.render('index.ejs');
