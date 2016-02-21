@@ -5,7 +5,8 @@ var vilSchema = mongoose.Schema({
 	name:{type:String, required:true, unique:true},
 	from:{type:String, required:true},
 	accomplishments:[],
-	about:String
+	about:String,
+	comments: [String]
 });
 
 

@@ -17,7 +17,7 @@
 
 					<% if(usertrue)  { %>
 						<p>add another movie to your collection</p>
-						<form action="/users/<%= user.id %>/" method="POST">
+						<form action="/users/<%=user.id %>" method="POST">
 							<input type="text" name="name" placeholder="Name">
 							<input type="text" name="from" placeholder="What story is he from?">
 							<input type="text" name="accomplishments" placeholder="High lights">

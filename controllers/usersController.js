@@ -4,27 +4,11 @@ var express  = require('express');
 				Vil 	 = require('../models/vilModel'),
  			passport = require('passport');    
 
-// user index
-// router.get('/', function(req, res) {
-// 	res.locals.login = req.isAuthenticated();
-// 	User.find(function(err, user) {
-// 		res.render('users/index.ejs', { user: user });
-// 	});
-// });
 
-// json for all users (for testing)
-// router.get('/json', function(req, res) {
-// 	User.find(function(err, user) {
-// 		res.send(users);
-// 	});
-// });
 
-// // json for specific user, fetched by ajax to display markers on map
-// router.get('/:id/json', function(req, res) {
-// 	User.findById(req.params.id, function(err, user) {
-// 		res.send(user);
-// 	});
-// });
+
+
+
 
 // logout of session
 router.get('/logout', function(req, res) {
@@ -40,6 +24,14 @@ router.get('/:id', isLoggedIn, function(req, res) {
 			res.render('users/show.ejs', { user: user });
 		});
 });
+
+
+
+
+
+
+
+
 
 
 
@@ -62,19 +54,13 @@ router.post('/login', passport.authenticate('local-login', {
     res.redirect('/users/' + req.user.id);
 });
 
-router.post('/:id/newVil', function(req, res) {
-	User.findById(req.params.id, function(err, user) {
-		var vils = new Vil(req.body);
-		vils.save(function(err, vils) {
-			user.vilss.push(vils);
-			user.save(function(err, user) {
-				res.redirect('/users/' + req.params.id);
-					});			
-			});
+
+router.post('/:id', function(req, res) {
+		var villain = new Vil(req.body);
+			villain.save(function(err, villain) {
+				res.redirect('/villains/');
+			});			
 		});
-});
-
-
 
 
 
@@ -102,6 +88,40 @@ function isLoggedIn(req, res, next) {
 }
 
 module.exports = router;
+
+
+
+// user index
+// router.get('/', function(req, res) {
+// 	res.locals.login = req.isAuthenticated();
+// 	User.find(function(err, user) {
+// 		res.render('users/index.ejs', { user: user });
+// 	});
+// });
+
+// json for all users (for testing)
+// router.get('/json', function(req, res) {
+// 	User.find(function(err, user) {
+// 		res.send(users);
+// 	});
+// });
+
+// // json for specific user, fetched by ajax to display markers on map
+// router.get('/:id/json', function(req, res) {
+// 	User.findById(req.params.id, function(err, user) {
+// 		res.send(user);
+// 	});
+// });
+
+
+
+
+
+
+
+
+
+
 
 
 // // router.get('/', function(req, res) {	

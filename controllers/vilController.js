@@ -3,8 +3,9 @@ var express = require('express'),
 
 var User      = require('../models/usersModel'),
     Vil  = require('../models/vilModel');
-// villains
+
 // villains index
+
 router.get('/', isLoggedIn, function(req, res) {
  Vil.find(function(err, vils) {
         res.render('villains/index.ejs' , { vils: vils} );
@@ -12,6 +13,14 @@ router.get('/', isLoggedIn, function(req, res) {
 });
 
 
+
+// router.post('/', function(req, res) {
+//   var vils = new Vil(req.body);
+//   vils.save(function(err, vils) {
+//     res.redirect('/index.ejs');
+//       });     
+
+// });
 
 
 
