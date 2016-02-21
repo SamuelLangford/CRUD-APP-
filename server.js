@@ -5,27 +5,35 @@ var express        = require('express'),
     port           = 3000 || process.env.PORT,
     app            = express(),
     passport       = require('passport'),
-    bcrypt         = require('bcrypt-nodejs');
-    
+    bcrypt         = require('bcrypt-nodejs'),
+    session        = require('express-session'),
+    passportLocal  = require('passport-local');
 
+mongoose.connect('mongodb://localhost/words');
 
-
-mongoose.connect('mongodb://localhost/');
-
+require('./config/passport.js')(passport);
 
 app.use(express.static('public'));
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
-
 app.use(methodOverride('_method'));
+
+app.use(session({ secret: 'wordswords' }));
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+app.use(function(req, res, next) {
+  res.locals.login = req.isAuthenticated();
+  next();
+});
 
 
 
 var usersController = require('./controllers/usersController');
-
 app.use('/users', usersController);
+
 
 //this is the rout to the home page 
 app.get('/', function(req, res){
@@ -33,6 +41,15 @@ app.get('/', function(req, res){
 });
 
 
-app.listen(port, function() {
-    console.log('Running on port ' + port);
+mongoose.connection.once('open', function() {
+    console.log("It's running boo");
+    app.listen(port, function() {
+        
+        console.log('Running on port ' + port);
+    });
 });
+
+
+
+
+
