@@ -5,26 +5,26 @@ var express  = require('express');
  		passport = require('passport');    
 
 // user index
-router.get('/', function(req, res) {
-	res.locals.login = req.isAuthenticated();
-	User.find(function(err, user) {
-		res.render('users/index.ejs', { user: user });
-	});
-});
+// router.get('/', function(req, res) {
+// 	res.locals.login = req.isAuthenticated();
+// 	User.find(function(err, user) {
+// 		res.render('users/index.ejs', { user: user });
+// 	});
+// });
 
 // json for all users (for testing)
-router.get('/json', function(req, res) {
-	User.find(function(err, user) {
-		res.send(users);
-	});
-});
+// router.get('/json', function(req, res) {
+// 	User.find(function(err, user) {
+// 		res.send(users);
+// 	});
+// });
 
-// json for specific user, fetched by ajax to display markers on map
-router.get('/:id/json', function(req, res) {
-	User.findById(req.params.id, function(err, user) {
-		res.send(user);
-	});
-});
+// // json for specific user, fetched by ajax to display markers on map
+// router.get('/:id/json', function(req, res) {
+// 	User.findById(req.params.id, function(err, user) {
+// 		res.send(user);
+// 	});
+// });
 
 // logout of session
 router.get('/logout', function(req, res) {
@@ -50,12 +50,24 @@ router.post('/', passport.authenticate('local-signup', {
     res.redirect('/users/' + req.user.id);
 });
 
+
+
+
+
+
 // login
 router.post('/login', passport.authenticate('local-login', { 
-	failureRedirect: '/users' }), function(req, res) {
+	failureRedirect: '/' }), function(req, res) {
     // success redirect goes to show page
-    res.redirect('/users/show.ejs' + req.user.id);
+    res.redirect('/users/' + req.user.id);
 });
+
+
+
+
+
+
+
 
 // delete 
 router.delete('/:id', function(req, res) {
@@ -67,7 +79,7 @@ router.delete('/:id', function(req, res) {
 		}) // end if
 	}); // end User fin
 
-// middleware to check login status
+// middleware to check login showtatus
 // used in show route
 function isLoggedIn(req, res, next) {
 	console.log('isLoggedIn middleware');

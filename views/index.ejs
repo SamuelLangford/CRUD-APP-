@@ -2,13 +2,7 @@
  
  <h1>Home page - index </h1>
 
-
-
-
-
-
-	<main>
-	
+	<main>	
 
 				<% if (!login) { %>
 					<h2>You must give us you information </h2>
@@ -28,7 +22,7 @@
 				<br/>
 					<h4>Log in</h4>
 					<form action="/users/login" method="POST">
-						<input type="text" name="username" placeholder="username">
+						<input type="text" name="email" placeholder="username">
 						<input type="text" name="password" placeholder="password">
 						<input type="submit">
 					</form>

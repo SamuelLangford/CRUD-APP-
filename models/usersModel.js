@@ -14,14 +14,13 @@ var userSchema = mongoose.Schema({
 	vils: [vilSchema]
 })
 
-
-userSchema.methods.generateHash = function() {
-	return bcrypt.hashSync(this.password, bcrypt.genSaltSync(8), null);
-} // this is the method to imply the bcrypt shit 
+userSchema.methods.generateHash = function(password) {
+	return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
+}
 
 userSchema.methods.validPassword = function(password) {
-    return bcrypt.compareSync(password, this.password);
-};
+	return bcrypt.compareSync(password, this.password);
+}
 
 var User = mongoose.model('User', userSchema);
 
