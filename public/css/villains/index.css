@@ -1,0 +1,13 @@
+body{
+	
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.villains {
+	height:25%;
+	width: 25%;
+	display: inline-block;
+}
+img {
+	height:25%;
+	width: 25%;
+}

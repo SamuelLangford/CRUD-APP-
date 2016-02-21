@@ -1,10 +1,28 @@
 <% include ../partials/header %>
 	
 	<h1>Villains Show page </h1>
+						<a href="/villains"><p>All Villains</p></a>
+
+ <div class='box>'<h1><%= name %></h1>
+    <small><%= from %></small><br/>
+    <p><%= about %></p>
+    <img src=" <%= image %> ">
+  <% for (var i = 0; i < accomplishments.length; i++) { %>
+	   <p>   <%= accomplishments[i]  %> </p>
+<% } %>
+</div>
 
 
 
-
-
+    <a href="/articles/<%=id%>/edit">Do you see something wrong with this guy?</a>
 <% include ../partials/footer %>
 <!-- after the user clicks on the movie it takes them here where it will tell you info on the movie and a page for prople to talk about it  -->
+
+
+<%#var vilSchema = mongoose.Schema({
+	name:{type:String, required:true, unique:true},
+	from:{type:String, required:true},
+	accomplishments:[],
+	about:String,
+	comments: [String]
+});%>

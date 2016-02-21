@@ -1,4 +1,9 @@
-<% include ../partials/header %>
+<html>
+<head>
+	<title>Show your Bones</title>
+	<link rel="stylesheet" type="text/css" href="/css/users/show.css">
+</head>
+<body>
 
 <h1>Users show </h1>
 	
@@ -12,15 +17,15 @@
 			<div id="map-canvas"></div>
 			<div id="control-panel">
 					<a href="/villains"><p>All Villains</p></a>
-					<%#<a href="/users"><p>Back to all users</p></a>%>
-					<p id="users-title"><%= user.username %>'s fav guys'</p>
+									<p id="users-title"> Welcome <%= user.username %>''</p>
 
 					<% if(usertrue)  { %>
-						<p>add another movie to your collection</p>
+						<p>Add another Villain!</p>
 						<form action="/users/<%=user.id %>" method="POST">
 							<input type="text" name="name" placeholder="Name">
 							<input type="text" name="from" placeholder="What story is he from?">
 							<input type="text" name="accomplishments" placeholder="High lights">
+							<input type="text" name="image" placeholder="Add an image!">
 							<input type="text" name="about" placeholder="Tell us more">
 
 							<input type="submit">				

@@ -1,14 +1,23 @@
-<% include ../partials/header %>
+
+<html>
+<head>
+	<title>Show your bones</title>
+		<link rel="stylesheet" type="text/css" href="/css/villains/index.css">
+</head>
+<body>
+
 	<h1>Villains Index!</h1>
 
 
 
 
 	<% for (var i=0; i < vils.length; i++) { %>
-						<div class="villain">
-							<p><%= vils[i].name %></p>
+						<div class="villain">	
+							<a href="/villains/<%=vils[i]._id%>">
+							 <img src=" <%= vils[i].image %> ">
+							<p><%= vils[i].name %></p>   </a>	
 						</div>
-					<% } %>
+		<% } %>
 
 
 
