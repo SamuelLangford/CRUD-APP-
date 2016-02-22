@@ -7,7 +7,11 @@ var commentSchema = mongoose.Schema({
 });
 
 
-var Comment = mongoose.model('Comment', commentSchema;
+var Comment = mongoose.model('Comment', commentSchema);
+
+
+
+
 
 
 

@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<a href="/">Home</a><br/>
+
+<h1>Edit <%=name%></h1>
+<form action="/villains/<%=id%>?_method=PUT" method="POST">
+
+<input type="text" name="accomplishments" value="<%= accomplishments%> "><br/>
+<textarea name="body" rows="8" cols="40" > <%=about%> 
+
+
+</textarea> 
+
+
+<br/>
+		<input type="submit">
+</form>
+
+
+
+
+
+<!-- var vilSchema = mongoose.Schema({ -->
+<!-- 	name:{type:String, required:true, unique:true},
+	from:{type:String, required:true},
+	image:String,
+	accomplishments:[],
+	about:String,
+	comments: [ commentSchema ]
+});
+ -->
+
+
+</body>
+</html>

@@ -9,15 +9,12 @@
 	
 	<p id="user_id" style="display: none"><%= user.id %></p>
 
-	<div id="container">
-		<div id="header">
-			<h1 id="title">Your movies</h1>
-		</div>
+	
 		<main>
 			<div id="map-canvas"></div>
 			<div id="control-panel">
 					<a href="/villains"><p>All Villains</p></a>
-									<p id="users-title"> Welcome <%= user.username %>''</p>
+									<p id="users-title"> Welcome <%= user.username %></p>
 
 					<% if(usertrue)  { %>
 						<p>Add another Villain!</p>
@@ -25,8 +22,12 @@
 							<input type="text" name="name" placeholder="Name">
 							<input type="text" name="from" placeholder="What story is he from?">
 							<input type="text" name="accomplishments" placeholder="High lights">
-							<input type="text" name="image" placeholder="Add an image!">
-							<input type="text" name="about" placeholder="Tell us more">
+							<input type="text" name="image" placeholder="Add an image!">	
+
+
+
+							<textarea name="about" rows="8" cols="40" placeholder="Tell us more"></textarea>
+							
 
 							<input type="submit">				
 						</form>

@@ -1,5 +1,8 @@
 var mongoose = require('mongoose');
 
+var commentSchema = require('./commentsModel.js').schema;
+
+
 
 var vilSchema = mongoose.Schema({
 	name:{type:String, required:true, unique:true},
@@ -7,7 +10,7 @@ var vilSchema = mongoose.Schema({
 	image:String,
 	accomplishments:[],
 	about:String,
-	// comments: [commentSchema]
+	comments: [ commentSchema ]
 });
 
 
