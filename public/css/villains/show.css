@@ -1,4 +1,30 @@
+*{
+	margin: 0;
+	padding: 0;
+}
 body{
  	background-color: purple;
  	font-family: "Comic Sans MS", cursive, sans-serif;
+ 	background-image: url(http://www.justekdruk.pl/assets/img/sliders/layer/bg3.jpg);
+ 	color: white;
+}
+img{
+	height:35%;
+	width:35%;
+}
+article{
+	background-color: gray;
+	float:right;
+	float: top;
+	width:30%;
+}
+#add{
+	height:30%;
+	width:30%;
+background-image: url(https://s.adroll.com/a/JPQ/D4U/JPQD4UWURVGWNKHMU5AT5X.jpg);
+background-size:cover;
+}
+#comment-container{
+	background-color: black;
+	text-align: center;
 }

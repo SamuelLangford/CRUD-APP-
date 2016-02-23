@@ -6,28 +6,18 @@
 </head>
 <body>
 
-	<h1>Villains Index!</h1>
+	<h1>  "Anyone who isn't with me opposes me, and anyone who isn't working with me is actually working against me."-Mathew 12:30 </h1>
 
 
 
 
 	<% for (var i=0; i < vils.length; i++) { %>
-						<div class="villain">	
-							<a href="/villains/<%=vils[i]._id%>">
-							 <img src=" <%= vils[i].image %> ">
-							<p><%= vils[i].name %></p>   </a>	
-						</div>
-		<% } %>
-
-
-
-
-
-
-
-
-
-
+			<div class="villain">	
+					<a href="/villains/<%=vils[i]._id%>">
+				 <img src=" <%= vils[i].image %> ">
+					<p><%= vils[i].name %></p>   </a>	
+			</div>
+ <% } %>
 
 
 

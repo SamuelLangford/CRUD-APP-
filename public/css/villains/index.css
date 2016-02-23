@@ -1,5 +1,8 @@
 body{
-	
+	background-image: url(http://s3.gatheringmagic.com/uploads/2011/09/07/MS_15.jpg);
+	background-size: cover;
+	color:#CC141C;
+	/*text-align: center;*/
 	font-family: "Comic Sans MS", cursive, sans-serif;
 }
 .villains {
@@ -8,6 +11,13 @@ body{
 	display: inline-block;
 }
 img {
-	height:25%;
-	width: 25%;
+	height:26%;
+	width: 20%;
 }
+h1{
+	text-align: center;
+}
+a {
+	color:#CC141C;
+}
+

@@ -5,12 +5,12 @@
 </head>
 <body>
  
- <h1>Home page - index </h1>
+ <h1> "We serial killers are your sons, your husbands, we are everywhere. And there will be more of your children dead tomorrow" -Ted Bundy</h1>
 
-	<main>	
+	<main>	<div id='header'>
 
 				<% if (!login) { %>
-					<h2>You must give us you information </h2>
+					<h2>You must give us your information </h2>
 			  <% } %>
 
 				<% if (!login) { %>
@@ -19,8 +19,9 @@
 					<form action="/users" method="POST">
 						<input type="text" name="username" placeholder="username">
 						<input type="text" name="email" placeholder="email">
-						<input type="text" name="password" placeholder="password">
-						<input type="submit">
+						<input type="text" name="password" placeholder="password"><br/>
+				<!-- 		<input type="submit"> -->
+				<button>Submit</button>
 					</form>
 
 				<br/>
@@ -28,8 +29,8 @@
 					<h4>Log in</h4>
 					<form action="/users/login" method="POST">
 						<input type="text" name="email" placeholder="username">
-						<input type="text" name="password" placeholder="password">
-						<input type="submit">
+						<input type="text" name="password" placeholder="password"><br/>				<button>Submit</button>
+
 					</form>
 
 				</br>
@@ -40,7 +41,7 @@
 					<a href="/users/logout"><p>Logout</p></a>
 
 				<% } %>
-
+				</div>
 			</main>
 	</div>
 

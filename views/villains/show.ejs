@@ -6,40 +6,33 @@
 <body>
 
 	
-	<h1>Villains Show page </h1>
-						<a href="/villains"><p>All Villains</p></a>
 
+
+	
+	<img src=" <%= image %> ">
  <div class='box>'><h1><%= name %></h1>
     <small><%= from %></small><br/>
-    <p><%= about %></p>
-    <img src=" <%= image %> ">
+ <article><%= about %></article>
+    	<div id='comment-container'>
+		<% for (var i = 0; i < comments.length; i++) { %>
+	    <p> <%= comments[i].words %></p>
+<% } %> 
+					</div>
+
   <% for (var i = 0; i < accomplishments.length; i++) { %>
 	   <p>   <%= accomplishments[i]  %> </p>
 <% } %>
 </div>	
-	<div id='comment-container'>
-		<% for (var i = 0; i < comments.length; i++) { %>
-	    <p> <%= comments[i].words %></p>
-<% } %> 
-
-
-	</div>
-
-
-
 
 		<form action="/villains/<%= id %>/comment" method="POST">
-						<input type="text" name="words" placeholder="Add Your own Comment">
-						<input type="submit">
+						<input type="text" name="words" placeholder="talk about this guy">
+						<input type="submit"><br>
+</form>
 
+  <a href="/villains/<%=id%>/edit">Think you know more about this guy?</a><br>
+  	<a href="/villains">Check out the rest of the crew</a>
 
-  <a href="/villains/<%=id%>/edit">Think you know more about this guy?</a>
-		</form>
-
-
-
-
-
+	<div id='add'> Your add here</div></a>
 
 
 

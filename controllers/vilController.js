@@ -8,7 +8,7 @@ var express   = require('express'),
 
 router.get('/', isLoggedIn, function(req, res) {
  Vil.find(function(err, vils) {
-        res.render('villains/index.ejs' , { vils: vils} );
+        res.render('villains/index.ejs' , { vils: vils,});
     });
 });
 

@@ -1,4 +1,21 @@
 body{
 	background-color: purple;
 	font-family: "Comic Sans MS", cursive, sans-serif;
+	text-align: center;
+		background-image: url(http://www.mywatchlinks.com/10003696_10200969659842920_5640297748387229044_o.jpg);
+	background-size: cover;
+ background-position: 50% 50%;
+	color:#CC141C;
+}
+a {
+	color:#CC141C;
+
+}
+input{
+	background-color: transparent;
+	  opacity: 1;
+
+}
+button {
+	background-color:#CC141C;
 }
