@@ -8,7 +8,7 @@ var express        = require('express'),
     bcrypt         = require('bcrypt-nodejs'),
     session        = require('express-session'),
     passportLocal  = require('passport-local'),
-    mongoUri = process.env.MONGOLAB_URI || 'mongodb://localhost/words';
+    mongoUri       = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/words';
     // mongoose.connect('mongodb://localhost/words');
     mongoose.connect(mongoUri);
 
@@ -39,7 +39,7 @@ var vilController = require('./controllers/vilController');
 app.use('/villains', vilController)
 //this is the rout to the home page 
 app.get('/', function(req, res){
-  res.redirect('/index.ejs');
+  res.render('index.ejs');
 });
 
 
