@@ -4,12 +4,13 @@ var express  = require('express');
 				Vil 				 = require('../models/vilModel'),
  			Comment 	= require('../models/commmentsModel');
 
-	// router.post('/comment', function(req, res) {
-	// 	var comment = new Comment(req.body);
-	// 		comment.save(function(err, comment) {
-	// 			res.redirect('/villains/show');
-	// 		});			
-	// 	});
+	router.post('/comment', function(req, res) {
+		var comment = new Comment(req.body);
+			comment.save(function(err, comment) {
+				// console.log(comment);
+				res.redirect('/villains/show');
+			});			
+		});
 
 
 

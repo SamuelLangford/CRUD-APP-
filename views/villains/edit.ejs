@@ -8,14 +8,15 @@
 
 <h1>Edit <%=name%></h1>
 <form action="/villains/<%=id%>?_method=PUT" method="POST">
+<input type="text" name="quote" value="<%= quote%>" placeholder="quote"><br/>
 
-<input type="text" name="accomplishments" value="<%= accomplishments%> "><br/>
-<textarea name="body" rows="8" cols="40" > <%=about%> 
+<input type='text' name='comments'value="<%= comments%> " ><br>
 
 
+<input type="text" name="image" value="<%= image %>" placeholder="New Image"><br/>
+
+<textarea name="about" rows="8" cols="40" value='<%=about%>'> <%=about%>
 </textarea> 
-
-
 <br/>
 		<input type="submit">
 </form>

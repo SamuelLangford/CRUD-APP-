@@ -1,23 +1,61 @@
+*{
+margin: 0;
+padding: 0;
+}
 body{
-	background-image: url(http://s3.gatheringmagic.com/uploads/2011/09/07/MS_15.jpg);
+	/*background-image: url(http://s3.gatheringmagic.com/uploads/2011/09/07/MS_15.jpg);*/
+	/*background-image: url(http://wallpoper.com/images/00/38/28/39/forest-scary_00382839.jpg);*/
+	/*background-image: url(https://wallpaperscraft.com/image/uncharted_city_bus_car_destruction_21370_1920x1080.jpg);*/
+	/*background-image: url(https://drscdn.500px.org/photo/101387263/m%3D2048/9526f5e215b68f122ac0be27d4eaecb1);*/
+	/*background-image: url(http://paper-backgrounds.com/textureimages/2012/08/gray-grunge-soft-leather-texture-background-hd.jpg);*/
+	background-image: url(http://theartmad.com/wp-content/uploads/Dark-Blue-Grey-Background-3.jpg);
+	/*background-image: url(http://images.designtrends.com/wp-content/uploads/2015/12/15055219/Dark-Gry-Background.jpg);*/
+	/*background-image: url(http://theartmad.com/wp-content/uploads/Dark-Grey-Background-Pattern-8.jpg);*/
 	background-size: cover;
-	color:#CC141C;
+	color:#666666;
+	/*color:#BABABA;*/
+	/*color: white;*/
 	/*text-align: center;*/
-	font-family: "Comic Sans MS", cursive, sans-serif;
-}
-.villains {
-	height:25%;
-	width: 25%;
-	display: inline-block;
-}
-img {
-	height:26%;
-	width: 20%;
-}
-h1{
+	font-family: "Times New Roman", Times, serif;
 	text-align: center;
 }
-a {
-	color:#CC141C;
+.villain {
+	height:25%;
+	width: 23%;
+	display: inline-block;
+ /*background-image: url(http://wallpoper.com/images/00/38/28/39/forest-scary_00382839.jpg);*/
+}
+/*.villain:hover{
+	height:26%;
+	width: 24%;
+}*/
+img:hover{
+	height:93%;
+	width: 78%;
+}
+p{
+	/*font-weight: bold;*/
+font-weight: bold;
+	/*color:white;*/
 }
 
+
+img {
+	height:90%;
+	width: 76%;
+	border-radius: 3%;
+	margin-top: 4%;
+
+}
+h1{
+	font-family: 'Great Vibes', cursive;
+text-align: center;
+opacity: .8;
+}
+a {
+color:white;
+font-family: 
+}
+/*span{
+	color:#4c4c4c;
+}*/

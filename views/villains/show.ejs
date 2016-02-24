@@ -2,41 +2,45 @@
 <head>
 	<title>Show your Bones</title>
 	<link rel="stylesheet" type="text/css" href="/css/villains/show.css">
+	<link href='https://fonts.googleapis.com/css?family=Kaushan+Script|Great+Vibes' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
 	
 
 
-	
+	<h1> <%= quote %> </h1>
+
 	<img src=" <%= image %> ">
- <div class='box>'><h1><%= name %></h1>
+ 	<article><%= about %></article>
+    	
+<!--  <div class='box>'> -->
+ 				<h2><%= name %></h2>
+
     <small><%= from %></small><br/>
- <article><%= about %></article>
-    	<div id='comment-container'>
+ 
+ 	
+
+
+    	<div id='comment-container'><h4>Comments</h4>
 		<% for (var i = 0; i < comments.length; i++) { %>
-	    <p> <%= comments[i].words %></p>
+	    <p> <%= comments[i].words %>   - <span> <%= comments[i].user %> </span></p>
+
 <% } %> 
 					</div>
 
-  <% for (var i = 0; i < accomplishments.length; i++) { %>
-	   <p>   <%= accomplishments[i]  %> </p>
-<% } %>
-</div>	
+
+<!-- </div>	 -->
 
 		<form action="/villains/<%= id %>/comment" method="POST">
-						<input type="text" name="words" placeholder="talk about this guy">
+						<input type="text" name="user" placeholder="Leave your name!">
+						<input type="text" name="words" placeholder="Leave a message!">
+
 						<input type="submit"><br>
-</form>
+		</form>
 
   <a href="/villains/<%=id%>/edit">Think you know more about this guy?</a><br>
   	<a href="/villains">Check out the rest of the crew</a>
-
-	<div id='add'> Your add here</div></a>
-
-
-
-
 
 
 

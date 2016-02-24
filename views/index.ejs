@@ -2,23 +2,23 @@
 <head>
 	<title>Show your Bones</title>
 	<link rel="stylesheet" type="text/css" href="/css/index.css">
+<link href='https://fonts.googleapis.com/css?family=Kaushan+Script|Great+Vibes' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
  
- <h1> "We serial killers are your sons, your husbands, we are everywhere. And there will be more of your children dead tomorrow" -Ted Bundy</h1>
+ <h1> "We serial killers are your sons, your husbands, we are everywhere. And there will be more of your children dead tomorrow"<br>-Ted Bundy
 
 	<main>	<div id='header'>
 
-				<% if (!login) { %>
-					<h2>You must give us your information </h2>
-			  <% } %>
+
 
 				<% if (!login) { %>
 
-					<h4>Sign up</h4>
+					<h3>Sign up</h3>
 					<form action="/users" method="POST">
 						<input type="text" name="username" placeholder="username">
-						<input type="text" name="email" placeholder="email">
+						<input type="text" name="email" placeholder="email"><br>
 						<input type="text" name="password" placeholder="password"><br/>
 				<!-- 		<input type="submit"> -->
 				<button>Submit</button>
@@ -26,10 +26,10 @@
 
 				<br/>
 				<br/>
-					<h4>Log in</h4>
+					<h3>Log in</h3>
 					<form action="/users/login" method="POST">
-						<input type="text" name="email" placeholder="username">
-						<input type="text" name="password" placeholder="password"><br/>				<button>Submit</button>
+						<input type="text" name="email" placeholder="username"><br>
+						<input type="text" name="password" placeholder="password"><br/><button>Submit</button>
 
 					</form>
 

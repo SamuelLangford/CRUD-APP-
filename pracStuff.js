@@ -40,7 +40,9 @@ for (var i = 0; i < users.length; i++) {
 							</div>
 						<% } %>
 					</div>
-
+  <!--   	  <% for (var i = 0; i < accomplishments.length; i++) { %>
+	   <p>   <%= accomplishments[i]  %> </p>
+							<% } %> -->
 
 
 

@@ -12,13 +12,31 @@ router.get('/', isLoggedIn, function(req, res) {
     });
 });
 
+
+
+router.get('/new', function(req, res){
+  res.render('villains/new.ejs');
+})
+
+
+
 router.get('/:id', function(req, res){
    Vil.findById(req.params.id, function(err, vils) {
     res.render('villains/show.ejs', vils)
    })
 })
-
-
+router.post('/', function(req, res){
+    var newVillain = new Vil(req.body);
+    newVillain.save(function(err, data){
+      res.redirect('/villains')
+    })
+})
+// router.post('/', function(req, res){
+//   var newArticle = new Article(req.body);
+//   newArticle.save(function(err, data){
+//     res.redirect('/articles');
+//   })
+// });
 
 
 
@@ -43,6 +61,8 @@ router.get('/:id/edit', function(req, res){
     res.render('villains/edit.ejs', data);
   });
 });
+
+
 router.put('/:id', function(req, res){
   Vil.findByIdAndUpdate(req.params.id, req.body, 
     function(err, data){
@@ -50,19 +70,10 @@ router.put('/:id', function(req, res){
   });
 });
 
-
-
-// router.get('/:id', function(req, res){
-//   Article.findById(req.params.id, function(err, data){
-//     res.render('articles/show.ejs',data);
-//   })
-// });
-// json for words, gets by ajax to display words
-// router.get('/json', function(req, res) {
-// 	Location.find(function(err, location) {
-// 		res.send(location);
-// 	});
-// });
+//delete route
+// router.delete("",
+//   comment.findById(req.body.comment_id))
+    // comment.remove()
 
 // middleware to check login status
 // used in index route
@@ -76,10 +87,3 @@ function isLoggedIn(req, res, next) {
 }
 
 module.exports = router;
-// user index
-// router.get('/', function(req, res) {
-//  res.locals.login = req.isAuthenticated();
-//  User.find(function(err, user) {
-//    res.render('users/index.ejs', { user: user });
-//  });
-// });

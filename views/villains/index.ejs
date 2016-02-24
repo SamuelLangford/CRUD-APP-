@@ -3,6 +3,7 @@
 <head>
 	<title>Show your bones</title>
 		<link rel="stylesheet" type="text/css" href="/css/villains/index.css">
+		<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
@@ -14,16 +15,15 @@
 	<% for (var i=0; i < vils.length; i++) { %>
 			<div class="villain">	
 					<a href="/villains/<%=vils[i]._id%>">
-				 <img src=" <%= vils[i].image %> ">
-					<p><%= vils[i].name %></p>   </a>	
+				 <img src=" <%= vils[i].image %> "></a>	
+					<p><%= vils[i].name %></p>
 			</div>
  <% } %>
 
+<br>
 
 
 
 
-
-
-
+<a href="/villains/new">Add to the list budy</a> <a href="/users/logout"><p>Logout</p></a>
 <% include ../partials/footer %>
