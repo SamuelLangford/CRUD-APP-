@@ -7,9 +7,10 @@ var express        = require('express'),
     passport       = require('passport'),
     bcrypt         = require('bcrypt-nodejs'),
     session        = require('express-session'),
-    passportLocal  = require('passport-local');
-
-mongoose.connect('mongodb://localhost/words');
+    passportLocal  = require('passport-local'),
+    mongoUri = process.env.MONGOLAB_URI || 'mongodb://localhost/still-crag-36375'),
+    // mongoose.connect('mongodb://localhost/words');
+    mongoose.connect(mongoUri);
 
 require('./config/passport.js')(passport);
 
@@ -44,8 +45,7 @@ app.get('/', function(req, res){
 
 mongoose.connection.once('open', function() {
     console.log("It's running boo");
-    app.listen(port, function() {
-        
+    app.listen(port, function() {   
         console.log('Running on port ' + port);
     });
 });

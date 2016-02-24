@@ -1,12 +1,15 @@
 <html>
 <head>
-	<title></title>
+	<title>Show Your Bones</title>
+	<link rel="stylesheet" type="text/css" href="/css/villains/edit.css">
+	<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
 <a href="/">Home</a><br/>
+<h1>The stories couldn't begin to descripe the treacherous acts I've done to the world</h1>
 
-<h1>Edit <%=name%></h1>
+<h2>Fix <%=name%></h2>
 <form action="/villains/<%=id%>?_method=PUT" method="POST">
 <input type="text" name="quote" value="<%= quote%>" placeholder="quote"><br/>
 
@@ -18,7 +21,7 @@
 <textarea name="about" rows="8" cols="40" value='<%=about%>'> <%=about%>
 </textarea> 
 <br/>
-		<input type="submit">
+<button>Submit</button>
 </form>
 
 

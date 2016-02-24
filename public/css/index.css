@@ -1,6 +1,7 @@
+
 body{
 	background-color: purple;
-
+	margin:0; 
 	font-family:"Times New Roman", Times, serif;
 	text-align: center;
 		/*background-image: url(http://www.mywatchlinks.com/10003696_10200969659842920_5640297748387229044_o.jpg);*/
@@ -22,10 +23,10 @@ input{
 button {
 	/*background-color:#CC141C;*/
 	background-image: url(https://thoughtcatalog.files.wordpress.com/2014/11/shutterstock_172928594.jpg?w=786&h=363);
-	margin-top: 1%;
+
 }
 h1{
-	color: #DCDCDC;
-	font-family: 'Great Vibes', cursive;
+color: #DCDCDC;
+font-family: 'Special Elite', cursive;
 	/*font-size: large;*/
 }

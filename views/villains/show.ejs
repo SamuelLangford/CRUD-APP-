@@ -3,44 +3,47 @@
 	<title>Show your Bones</title>
 	<link rel="stylesheet" type="text/css" href="/css/villains/show.css">
 	<link href='https://fonts.googleapis.com/css?family=Kaushan+Script|Great+Vibes' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
 
-	
 
+  	<a href="/villains">Home</a>
 
 	<h1> <%= quote %> </h1>
+ 	<div id='comment-container'><h4>Comments</h4>
+						<% for (var i = 0; i < comments.length; i++) { %>
+	    		<p> <%= comments[i].words %>   <small>  <%= comments[i].user %> </small></p>
 
+						<% } %> 
+					
+
+				<form action="/villains/<%= id %>/comment" method="POST">
+						<input type="text" name="user" placeholder="Leave your name!"><br>
+						<textarea name="words" rows="8" cols="30" placeholder="Leave a message!"></textarea>
+					<br>
+						<input type="submit">
+						<br>
+				</form>
+									</div>
 	<img src=" <%= image %> ">
- 	<article><%= about %></article>
+
+
     	
 <!--  <div class='box>'> -->
- 				<h2><%= name %></h2>
+ 				<h2><%= name %></h2> <h3> from <%= from %></h3><br/>
 
-    <small><%= from %></small><br/>
+   
  
- 	
-
-
-    	<div id='comment-container'><h4>Comments</h4>
-		<% for (var i = 0; i < comments.length; i++) { %>
-	    <p> <%= comments[i].words %>   - <span> <%= comments[i].user %> </span></p>
-
-<% } %> 
-					</div>
-
-
+   
+			<!-- </div> -->
 <!-- </div>	 -->
+ 	<article><%= about %></article>
+	
 
-		<form action="/villains/<%= id %>/comment" method="POST">
-						<input type="text" name="user" placeholder="Leave your name!">
-						<input type="text" name="words" placeholder="Leave a message!">
+  <a href="/villains/<%=id%>/edit">Edit</a><br>
 
-						<input type="submit"><br>
-		</form>
-
-  <a href="/villains/<%=id%>/edit">Think you know more about this guy?</a><br>
-  	<a href="/villains">Check out the rest of the crew</a>
 
 
 

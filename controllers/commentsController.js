@@ -13,5 +13,14 @@ var express  = require('express');
 		});
 
 
+function isLoggedIn(req, res, next) {
+  console.log('isLoggedIn middleware');
+  if (req.isAuthenticated()) {
+    return next(); 
+  } else {
+    res.redirect('/users');
+  }
+}
+
 
 module.exports = router;

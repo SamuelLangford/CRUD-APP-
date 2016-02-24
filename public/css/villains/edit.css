@@ -1,0 +1,23 @@
+body{
+	background-image:url(http://theartmad.com/wp-content/uploads/Grey-Wood-Background-08.jpg);
+		color:white;
+		font-family: 'Great Vibes', cursive;
+		text-align: center;
+
+}
+h1{
+	color: white;
+font-family: 'Great Vibes', cursive;
+text-align: center;
+opacity: .8;
+}
+a{		
+	color:white;
+}
+input{
+	margin: 3%;
+}
+
+button{
+		background-image: url(https://thoughtcatalog.files.wordpress.com/2014/11/shutterstock_172928594.jpg?w=786&h=363);
+}
