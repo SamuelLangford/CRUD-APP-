@@ -8,7 +8,7 @@ var express        = require('express'),
     bcrypt         = require('bcrypt-nodejs'),
     session        = require('express-session'),
     passportLocal  = require('passport-local'),
-    mongoUri = process.env.MONGOLAB_URI || 'mongodb://localhost/still-crag-36375'),
+    mongoUri = process.env.MONGOLAB_URI || 'mongodb://localhost/words');
     // mongoose.connect('mongodb://localhost/words');
     mongoose.connect(mongoUri);
 
