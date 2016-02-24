@@ -2,13 +2,13 @@ var express        = require('express'),
     bodyParser     = require('body-parser'),
     methodOverride = require('method-override'),
     mongoose       = require('mongoose'),
-    port           = 3000 || process.env.PORT,
+    port           = process.env.PORT || 3000 ,
     app            = express(),
     passport       = require('passport'),
     bcrypt         = require('bcrypt-nodejs'),
     session        = require('express-session'),
     passportLocal  = require('passport-local'),
-    mongoUri = process.env.MONGOLAB_URI || 'mongodb://localhost/words');
+    mongoUri = process.env.MONGOLAB_URI || 'mongodb://localhost/words';
     // mongoose.connect('mongodb://localhost/words');
     mongoose.connect(mongoUri);
 
@@ -39,7 +39,7 @@ var vilController = require('./controllers/vilController');
 app.use('/villains', vilController)
 //this is the rout to the home page 
 app.get('/', function(req, res){
-  res.render('index.ejs');
+  res.redirect('/index.ejs');
 });
 
 
