@@ -12,7 +12,7 @@ var express        = require('express'),
     // mongoose.connect('mongodb://localhost/words');
     mongoose.connect(mongoUri);
 
-require('./config/passport.js')(passport);
+require('./config/Passport.js')(passport);
 
 app.use(express.static('public'));
 
