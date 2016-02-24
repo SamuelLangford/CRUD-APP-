@@ -21,9 +21,11 @@ body{
 	height:92%;
 	width: 77%;
 	/*position: fixed;*/
-}*/
+}
 p{
 font-weight: bold;
+color:#771100;
+
 }
 
 img {
@@ -36,6 +38,7 @@ h1{
 	font-family: 'Great Vibes', cursive;
 text-align: center;
 opacity: .8;
+color:#771100;
 }
 a {
 color:white;

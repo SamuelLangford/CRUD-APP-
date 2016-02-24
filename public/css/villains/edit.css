@@ -1,13 +1,15 @@
 body{
-	background-image:url(https://theartmad.com/wp-content/uploads/Grey-Wood-Background-08.jpg);
+	background-image:url(https://s3-eu-west-1.amazonaws.com/genial.ly/5513fdb91561e90b7099317e/slides/7971363c-357c-4bd6-8740-dbd796ac158f.jpg);
 		color:white;
 		font-family: 'Great Vibes', cursive;
 		text-align: center;
+		font-family: 'Rye', cursive;
 
 }
 h1{
 	color: white;
-font-family: 'Great Vibes', cursive;
+/*font-family: 'Great Vibes', cursive;*/
+font-family: 'Rye', cursive;
 text-align: center;
 opacity: .8;
 }
