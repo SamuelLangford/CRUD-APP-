@@ -36,6 +36,8 @@ article{
 	float: right;
 	color: black;
 	opacity: .6;
+	margin-right: 5%;
+	margin-left: 5%;
 	/*background: transparent;*/
 }
 
@@ -54,4 +56,7 @@ h4 {
 input {
 		opacity: .8;
 		margin: 2%;
+}
+button {
+	color:transparent
 }
