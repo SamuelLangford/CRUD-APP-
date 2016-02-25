@@ -63,5 +63,7 @@ input {
 #home{
 	margin: 1%;
 	background-color:#190000;
+	color:grey;
+	border:none;
 }
 
