@@ -38,7 +38,7 @@ article{
 	opacity: .6;
 	margin-right: 5%;
 	margin-left: 5%;
-	/*background: transparent;*/
+
 }
 
 #comment-container{
@@ -58,5 +58,10 @@ input {
 		margin: 2%;
 }
 button {
-	color:transparent
+	opacity: .03;
 }
+#Home{
+	margin: 1%;
+	background-color:#190000;
+}
+
