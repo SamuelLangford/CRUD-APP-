@@ -25,7 +25,7 @@ opacity: .8;
 img{
 	height:40%;
 	border-radius: 1%;
-	margin-left: 4%;
+	margin-left: 8%;
 }
 
 article{
@@ -42,7 +42,7 @@ article{
 #comment-container{
 	/*position: fixed;
 	top:0;*/
-	height:20%;
+margin-right: 4%;
 	float: right;
 margin-right: 5%;
 	/*width:10%;*/
