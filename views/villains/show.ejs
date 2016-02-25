@@ -12,6 +12,7 @@
   	<a href="/villains">Home</a>
 
 	<h1> <%= quote %> </h1>
+ 	
  	<div id='comment-container'><h4>Comments</h4>
 						<% for (var i = 0; i < comments.length; i++) { %>
 	    		<p> <%= comments[i].words %>   <small>  <%= comments[i].user %> </small></p>
@@ -22,11 +23,13 @@
 				<form action="/villains/<%= id %>/comment" method="POST">
 						<input type="text" name="user" placeholder="Leave your name!"><br>
 						<textarea name="words" rows="8" cols="30" placeholder="Leave a message!"></textarea>
-					<br>
+						<br>
 						<input type="submit">
 						<br>
 				</form>
-									</div>
+		
+		</div>
+
 	<img src=" <%= image %> ">
 
 

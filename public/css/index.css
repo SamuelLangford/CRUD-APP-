@@ -5,7 +5,7 @@ body{
 	font-family:"Times New Roman", Times, serif;
 	text-align: center;
 		/*background-image: url(http://www.mywatchlinks.com/10003696_10200969659842920_5640297748387229044_o.jpg);*/
-		background-image: url(http://eskipaper.com/images/scary-backgrounds-3.jpg);
+	background-image: url(http://eskipaper.com/images/scary-backgrounds-3.jpg);
 	background-size: cover;
  background-position: 50% 50%;
 	color:#F0F0F0;
@@ -22,7 +22,7 @@ input{
 }
 button {
 	/*background-color:#CC141C;*/
-	background-image: url(https://thoughtcatalog.files.wordpress.com/2014/11/shutterstock_172928594.jpg?w=786&h=363);
+	
 
 }
 h1{
