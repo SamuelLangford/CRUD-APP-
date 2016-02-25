@@ -57,10 +57,10 @@ input {
 		opacity: .8;
 		margin: 2%;
 }
-button {
+#edit {
 	opacity: .03;
 }
-#Home{
+#home{
 	margin: 1%;
 	background-color:#190000;
 }
