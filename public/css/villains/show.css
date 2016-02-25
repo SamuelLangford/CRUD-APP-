@@ -18,13 +18,14 @@ body{
 font-family: 'Special Elite', cursive;
 text-align: center;
 opacity: .8;
-margin-right: 4%;
+
 
 }
 
 img{
 	height:40%;
 	border-radius: 1%;
+	margin-left: 4%;
 }
 
 article{
