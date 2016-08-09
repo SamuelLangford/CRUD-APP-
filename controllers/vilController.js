@@ -4,8 +4,6 @@ var express   = require('express'),
     Vil       = require('../models/vilModel'),
     Comment   = require('../models/commentsModel');
 
-// villains index
-
 router.get('/', isLoggedIn, function(req, res) {
  Vil.find(function(err, vils) {
         res.render('villains/index.ejs' , { vils: vils,});
@@ -31,18 +29,8 @@ router.post('/', function(req, res){
       res.redirect('/villains')
     })
 })
-// router.post('/', function(req, res){
-//   var newArticle = new Article(req.body);
-//   newArticle.save(function(err, data){
-//     res.redirect('/articles');
-//   })
-// });
 
-
-
-
-
-  router.post('/:id/comment', function(req, res) { 
+ router.post('/:id/comment', function(req, res) { 
     Vil.findById(req.params.id, function(err, vils) {
       var comment = new Comment(req.body);
       vils.comments.push(comment);
@@ -70,13 +58,6 @@ router.put('/:id', function(req, res){
   });
 });
 
-//delete route
-// router.delete("",
-//   comment.findById(req.body.comment_id))
-    // comment.remove()
-
-// middleware to check login status
-// used in index route
 function isLoggedIn(req, res, next) {
   console.log('isLoggedIn middleware');
   if (req.isAuthenticated()) {
